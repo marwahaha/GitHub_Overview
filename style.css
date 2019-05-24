@@ -14,3 +14,18 @@
     min-height: 400px;
     background-color: grey;
 }
+
+[class^="tab"]{
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+
+}
+
+/* .tab2{
+    margin: 0 0 0 20%;
+}
+
+.tab2{
+    margin: 0 0 0 40px;
+} */

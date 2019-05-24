@@ -1,10 +1,11 @@
-// function screenHeight(){                //sets rows to screen height
-//     var h = document.documentElement.clientHeight;
-//     let l = document.getElementsByClassName("row");
-//     for(var i = 0; i < l.length; i++){
-//         l[i].style.height = h+"px";
-//     }
-// }
-// screenHeight();
 
-// alert("blip");
+
+$(document).ready(function() {
+
+    for(x=1; x<9; x++){
+        $(".tab"+x).css("left", (10 * x)+"%");                  // function to move tabs rightward
+    }
+
+    
+
+});

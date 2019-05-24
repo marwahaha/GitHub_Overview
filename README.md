@@ -10,7 +10,8 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 * [x] add images
 * [x] set up height spacing with script
 * [x] add 'tab' at the top of each folder
-* [ ] make tab sticky
+* * abondoned 'sticky' keyword as it dit nog provide the desired functionality
+* [ ] make tab stick to folder once folder is scrolled into view
 * [ ] add descriptions
 * [ ] add explanation of [s], [f] and [b]
 
@@ -21,5 +22,5 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 
 #### Personal objectives:
 
-* [ ] get comfortable gith the keyword 'sticky'
+* [ ] get comfortable gith the keyword 'sticky' - this goal has been put on hold for now
 
