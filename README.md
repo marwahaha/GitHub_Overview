@@ -8,8 +8,8 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 * [x] make 'folders' equal to the amount of projects my Github has
 * [x] set up spacing with bootstrap
 * [x] add images
-* [ ] set up height spacing with script
-* [ ] add 'tab' at the top of each folder
+* [x] set up height spacing with script
+* [x] add 'tab' at the top of each folder
 * [ ] make tab sticky
 * [ ] add descriptions
 * [ ] add explanation of [s], [f] and [b]
