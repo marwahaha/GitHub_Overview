@@ -5,8 +5,9 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 #### Objectives:
 
 * [x] set up basic HTML structure
-* [ ] make 'folders' equal to the amount of projects my Github has
+* [x] make 'folders' equal to the amount of projects my Github has
 * [ ] set up spacing with bootstrap
+* [ ] set up height spacing with script
 * [ ] add 'tab' at the top of each folder
 * [ ] make tab sticky
 * [ ] add images
@@ -14,7 +15,11 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 * [ ] add explanation of [s], [f] and [b]
 
 
+#### Long term options:
+* [ ] write script to dynamically generate background colours
+* [ ] look into options of connecting with GitHub API
+
 #### Personal objectives:
 
 * [ ] get comfortable gith the keyword 'sticky'
-* [ ] look into options of connecting with GitHub API
+
