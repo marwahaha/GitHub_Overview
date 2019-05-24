@@ -4,13 +4,14 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 
 #### Objectives:
 
-* [ ] set up basic HTML structure
+* [x] set up basic HTML structure
 * [ ] make 'folders' equal to the amount of projects my Github has
 * [ ] set up spacing with bootstrap
 * [ ] add 'tab' at the top of each folder
 * [ ] make tab sticky
 * [ ] add images
 * [ ] add descriptions
+* [ ] add explanation of [s], [f] and [b]
 
 
 #### Personal objectives:
