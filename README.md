@@ -14,6 +14,7 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 * * abondoned 'sticky' keyword as it dit nog provide the desired functionality
 * [x] make tab stick to folder once folder is scrolled into view
 * * [ ] make alignment for sticking smooth
+* * [ ] make tabs detach when scrolling back up
 * [ ] add descriptions
 * [ ] add explanation of [s], [f] and [b]
 
