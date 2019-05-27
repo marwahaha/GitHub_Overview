@@ -16,28 +16,37 @@ $(document).ready(function() {
         $(".tab"+x).css("margin-left", (10 * x)+"%");                   // function to move tabs rightward
         folderHeight[x] = $(".project"+x).offset().top;                 // function to dynamically create variables and set them to their respective div-distance to top
     }
-    console.log(folderHeight[1]);
-    console.log(folderHeight[2]);
-    console.log(folderHeight[3]);
-    console.log(folderHeight[4]);
-    console.log(folderHeight[5]);
-    console.log(folderHeight[6]);
-    console.log(folderHeight[7]);
-    console.log(folderHeight[8]);
+    // console.log(folderHeight[1]);
+    // console.log(folderHeight[2]);
+    // console.log(folderHeight[3]);
+    // console.log(folderHeight[4]);
+    // console.log(folderHeight[5]);
+    // console.log(folderHeight[6]);
+    // console.log(folderHeight[7]);
+    // console.log(folderHeight[8]);
 
     window.onscroll = function(){                                       // function to switch 'tabs' from fixed to static 
         var scrolled = document.body.scrollTop;
-        console.log(scrolled);
+            // console.log(scrolled);
         for(x=1; x<9; x++){
-            if ((folderHeight[x] - h) < scrolled){ 
-                // $(".tab"+x).css("display", "static");
+            if (folderHeight[x] <= (scrolled + (h + ((x-1)*4)-(x*50)))){      
+                                                                        /* does not sync properly yet. Screen hight is always 50 + x*14 pixels smaller than folder hight
+                                                                        14 is margin between folders
+                                                                        50 is height of tabs */
+
+
+
+                // $(".tab"+x).css("display", "static");                     // what I want is for the tap to alternate when 
                 document.getElementsByClassName("tab"+x)[0].style.position = "static";
+                //
             }
-            else if ((folderHeight[x] - h) > scrolled){ 
+            else if (folderHeight[x]  >= (scrolled + (h + ((x-1)*4)-(x*50)))){ 
                 // $(".tab"+x).css("display", "static");
                 document.getElementsByClassName("tab"+x)[0].style.position = "fixed";
             }
         }
+        console.log(h);
+        console.log(folderHeight[6]);
     }
 
 });
