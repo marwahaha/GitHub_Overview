@@ -25,8 +25,9 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 Goal: to connect my overview-page to to the GitHub API. The intent is to make the overview show data from my GitHub account. These exercises might rely heavily on analyzing example code.
 
 * [x] add code that connects to gitHub API in general
-* [ ] make code connect to my my account
-* [ ] retrieve specific data from my account
+* [x] make code retrieve specific project made by me
+* [ ] Put one specific instance of retrieved data on screen
+* [ ] try to retrieve either repository description or repository commit timeline 
 
 
 #### Long term options:

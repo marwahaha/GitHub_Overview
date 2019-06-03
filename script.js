@@ -42,9 +42,12 @@ $(document).ready(function() {
         console.log(folderHeight[6]);
     }
 
+// --------------------------------------------------------------------------------- API ---------------------------------------------------------------------------------
 
 let xhr = new XMLHttpRequest;
-xhr.open('GET', 'https://api.github.com/users', true)
+// xhr.open('GET', 'https://api.github.com/users/JoskedeJong/repos', true)
+xhr.open('GET', 'https://api.github.com/repos/JoskedeJong/ProjectZoo',true)
+// xhr.open('GET', 'https://api.github.com/repos/JoskedeJong/ProjectZoo/git/commits',true)
 xhr.onload = function(){
     if(this.status === 200){
         console.log(JSON.parse(this.responseText));
