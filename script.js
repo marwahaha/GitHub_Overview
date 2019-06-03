@@ -16,14 +16,7 @@ $(document).ready(function() {
         $(".tab"+x).css("margin-left", (10 * x)+"%");                   // function to move tabs rightward
         folderHeight[x] = $(".project"+x).offset().top;                 // function to dynamically create variables and set them to their respective div-distance to top
     }
-    // console.log(folderHeight[1]);
-    // console.log(folderHeight[2]);
-    // console.log(folderHeight[3]);
-    // console.log(folderHeight[4]);
-    // console.log(folderHeight[5]);
-    // console.log(folderHeight[6]);
-    // console.log(folderHeight[7]);
-    // console.log(folderHeight[8]);
+
 
     window.onscroll = function(){                                       // function to switch 'tabs' from fixed to static 
         var scrolled = document.body.scrollTop;
@@ -49,4 +42,14 @@ $(document).ready(function() {
         console.log(folderHeight[6]);
     }
 
+
+let xhr = new XMLHttpRequest;
+xhr.open('GET', 'https://api.github.com/users', true)
+xhr.onload = function(){
+    if(this.status === 200){
+        console.log(JSON.parse(this.responseText));
+    }
+}
+xhr.send();
+  
 });
