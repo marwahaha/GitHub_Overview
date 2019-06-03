@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 
 
-                // $(".tab"+x).css("display", "static");                     // what I want is for the tap to alternate when 
+                // $(".tab"+x).css("display", "static");       
                 document.getElementsByClassName("tab"+x)[0].style.position = "static";
                 //
             }
@@ -44,15 +44,38 @@ $(document).ready(function() {
 
 // --------------------------------------------------------------------------------- API ---------------------------------------------------------------------------------
 
+    // $.ajax({
+    //     url: 'https://api.github.com/repos/JoskedeJong/ProjectZoo',
+    //     //  url: 'https://api.github.com/repos/JoskedeJong/ProjectZoo/pushed_at',
+    //     dataType: 'json',
+    //     method: 'GET',
+    //     success: function (data) {
+    //         console.log(data);
+    //         x = data["pushed_at"];
+    //         $(".content1").append("This project was last pushed at: "+x);
+    //     },
+    //     error: function (error) {
+    //         console.log(error)
+    //     }
+    // });
+
+
+    // GET /orgs/:org/repos
     $.ajax({
-        url: 'https://api.github.com/repos/JoskedeJong/ProjectZoo',
-        //  url: 'https://api.github.com/repos/JoskedeJong/ProjectZoo/pushed_at',
+        // url: 'https://api.github.com/repos/JoskedeJong/GitHub_Overview/events',
+        url: 'https://api.github.com/users/JoskedeJong/repos',
         dataType: 'json',
         method: 'GET',
         success: function (data) {
             console.log(data);
-            x = data["pushed_at"];
-            $(".content1").append("This project was last pushed at: "+x);
+            for(i=0; i<9; i++){
+                x = data[i]["description"];
+                if (x != null){
+                    $(".content"+i).append("<p>"+x+"</p>");
+                }
+                y = data[i]["pushed_at"];
+                $(".content"+i).append("This project was last pushed at: "+y);
+            }
         },
         error: function (error) {
             console.log(error)
