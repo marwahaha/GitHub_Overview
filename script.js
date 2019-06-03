@@ -46,10 +46,13 @@ $(document).ready(function() {
 
     $.ajax({
         url: 'https://api.github.com/repos/JoskedeJong/ProjectZoo',
+        //  url: 'https://api.github.com/repos/JoskedeJong/ProjectZoo/pushed_at',
         dataType: 'json',
         method: 'GET',
         success: function (data) {
             console.log(data);
+            x = data["pushed_at"];
+            $(".content1").append("This project was last pushed at: "+x);
         },
         error: function (error) {
             console.log(error)
