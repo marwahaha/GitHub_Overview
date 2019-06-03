@@ -44,15 +44,16 @@ $(document).ready(function() {
 
 // --------------------------------------------------------------------------------- API ---------------------------------------------------------------------------------
 
-let xhr = new XMLHttpRequest;
-// xhr.open('GET', 'https://api.github.com/users/JoskedeJong/repos', true)
-xhr.open('GET', 'https://api.github.com/repos/JoskedeJong/ProjectZoo',true)
-// xhr.open('GET', 'https://api.github.com/repos/JoskedeJong/ProjectZoo/git/commits',true)
-xhr.onload = function(){
-    if(this.status === 200){
-        console.log(JSON.parse(this.responseText));
-    }
-}
-xhr.send();
-  
+    $.ajax({
+        url: 'https://api.github.com/repos/JoskedeJong/ProjectZoo',
+        dataType: 'json',
+        method: 'GET',
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (error) {
+            console.log(error)
+        }
+    });
+
 });

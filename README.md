@@ -26,6 +26,7 @@ Goal: to connect my overview-page to to the GitHub API. The intent is to make th
 
 * [x] add code that connects to gitHub API in general
 * [x] make code retrieve specific project made by me
+* [x] use ajax to make same request
 * [ ] Put one specific instance of retrieved data on screen
 * [ ] try to retrieve either repository description or repository commit timeline 
 
