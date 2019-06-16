@@ -12,9 +12,10 @@ $(document).ready(function() {
     screenHeight();
 
     for(x=1; x<9; x++){
-        // $(".tab"+x).css("left", (10 * x)+"%");                       
-        $(".tab"+x).css("margin-left", (10 * x)+"%");                   // function to move tabs rightward
-        folderHeight[x] = $(".project"+x).offset().top;                 // function to dynamically create variables and set them to their respective div-distance to top
+        if (x > 1){                      
+            $(".tab"+x).css("margin-left", (10 * (x-1))+"%");           // function to move tabs rightward
+        }
+        folderHeight[x] = $(".project"+x).offset().top;                 // function to dynamically set 'folder' height to screen height
     }
 
 
@@ -22,24 +23,23 @@ $(document).ready(function() {
         var scrolled = document.body.scrollTop;
             // console.log(scrolled);
         for(x=1; x<9; x++){
-            if (folderHeight[x] <= (scrolled + (h + ((x-1)*4)-(x*50)))){      
+            if (folderHeight[x] <= (scrolled + (h + (x*14)-(x*64)))){      
                                                                         /* does not sync properly yet. Screen hight is always 50 + x*14 pixels smaller than folder hight
                                                                         14 is margin between folders
                                                                         50 is height of tabs */
-
-
-
                 // $(".tab"+x).css("display", "static");       
                 document.getElementsByClassName("tab"+x)[0].style.position = "static";
-                //
+                document.getElementsByClassName("buffer"+x)[0].style.marginTop = 0+"px";
             }
-            else if (folderHeight[x]  >= (scrolled + (h + ((x-1)*4)-(x*50)))){ 
+
+            else if (folderHeight[x]  >= (scrolled + (h + (x*14)-(x*64)))){ 
                 // $(".tab"+x).css("display", "static");
                 document.getElementsByClassName("tab"+x)[0].style.position = "fixed";
+                document.getElementsByClassName("buffer"+x)[0].style.marginTop = 50+"px";
             }
         }
-        console.log(h);
-        console.log(folderHeight[6]);
+        // console.log(h);
+        // console.log(folderHeight[6]);
     }
 
 // --------------------------------------------------------------------------------- API ---------------------------------------------------------------------------------
@@ -60,7 +60,6 @@ $(document).ready(function() {
     // });
 
 
-    // GET /orgs/:org/repos
     $.ajax({
         // url: 'https://api.github.com/repos/JoskedeJong/GitHub_Overview/events',
         url: 'https://api.github.com/users/JoskedeJong/repos',
@@ -69,11 +68,11 @@ $(document).ready(function() {
         success: function (data) {
             console.log(data);
             for(i=0; i<9; i++){
-                x = data[i]["description"];
+                x = data[i]["description"];                             // gathers description, if resent
                 if (x != null){
                     $(".content"+i).append("<p>"+x+"</p>");
                 }
-                y = data[i]["pushed_at"];
+                y = data[i]["pushed_at"];                               // gathers last push date
                 $(".content"+i).append("This project was last pushed at: "+y);
             }
         },

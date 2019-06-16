@@ -20,6 +20,7 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 * [ ] add explanation of [s], [f] and [b]
 * [ ] style page
 
+
 #### Objectives Round 2: GitHub API
 
 Goal: to connect my overview-page to to the GitHub API. The intent is to make the overview show data from my GitHub account. These exercises might rely heavily on analyzing example code.
@@ -28,14 +29,24 @@ Goal: to connect my overview-page to to the GitHub API. The intent is to make th
 * [x] make code retrieve specific project made by me
 * [x] use ajax to make same request
 * [x] Put one specific instance of retrieved data on screen
-* [ ] try to retrieve either repository description or repository commit timeline 
+* [x] try to retrieve either repository description or repository commit timeline 
 
 
-#### Long term options:
+#### Objectives Round 3: Polishing up the project
+* [ ] fix tabs bumping up previous content upon going static
+* [ ] make tabs clickable, making them scroll to their respective articles
+* [ ] make 'move to top' tab
+* [ ] make API call retrieve images from all the repositories
+
+
+## Long term options:
 * [ ] write script to dynamically generate background colours tor tabs
 * [x] look into options of connecting with GitHub API
+* [ ] dynamically create article sections in HTML
+* * [ ] dynamically create and space tabs
+
 
 #### Personal objectives:
 
 * [x] get comfortable gith the keyword 'sticky' - this goal has been put on hold for now
-
+* [ ] make a slick looking page that provides a smooth user experience
