@@ -33,8 +33,8 @@ Goal: to connect my overview-page to to the GitHub API. The intent is to make th
 
 
 #### Objectives Round 3: Polishing up the project
-* [ ] fix tabs bumping up previous content upon going static
-* [ ] make tabs clickable, making them scroll to their respective articles
+* [x] fix tabs bumping up previous content upon going static
+* [x] make tabs clickable, making them scroll to their respective articles
 * [ ] make 'move to top' tab
 * [ ] make API call retrieve images from all the repositories
 

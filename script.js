@@ -16,8 +16,11 @@ $(document).ready(function() {
             $(".tab"+x).css("margin-left", (10 * (x-1))+"%");           // function to move tabs rightward
         }
         folderHeight[x] = $(".project"+x).offset().top;                 // function to dynamically set 'folder' height to screen height
-    }
 
+        // $(".tab"+x).click(function(y){
+        //     $(".tab"+y).getElementsByClassName(".tab"+y).scrollIntoView(true); 
+        // });
+    }
 
     window.onscroll = function(){                                       // function to switch 'tabs' from fixed to static 
         var scrolled = document.body.scrollTop;
@@ -82,3 +85,7 @@ $(document).ready(function() {
     });
 
 });
+
+function scrollFunction(x){
+    document.getElementsByClassName("project"+x)[0].scrollIntoView({behavior: "smooth"}); 
+}
