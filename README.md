@@ -18,7 +18,6 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 * [x] make tabs scroll back to element
 * [ ] add descriptions
 * [ ] add explanation of [s], [f] and [b]
-* [ ] style page
 
 
 #### Objectives Round 2: GitHub API
@@ -36,7 +35,15 @@ Goal: to connect my overview-page to to the GitHub API. The intent is to make th
 * [x] fix tabs bumping up previous content upon going static
 * [x] make tabs clickable, making them scroll to their respective articles
 * [ ] make 'move to top' tab
-* [ ] make API call retrieve images from all the repositories
+* [ ] make API call retrieve images from repositories
+* [ ] style page
+* * [x] add shading to folders
+* * [ ] add sloped sides to tabs
+* * [ ] add slow scrolling background
+* * [ ] add text field
+* * [ ] add nice fonts
+* * [ ] space text
+* * [ ] 
 
 
 ## Long term options:
