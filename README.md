@@ -11,7 +11,7 @@ Goal: to make a presentation page for my GitHub projects. The end-result should 
 * [x] set up height spacing with script
 * * [x] kame 'folders' minheight equal to screen size.
 * [x] add 'tab' at the top of each folder
-* * abondoned 'sticky' keyword as it dit nog provide the desired functionality
+* * abandoned 'sticky' keyword as it dit nog provide the desired functionality
 * [x] make tab stick to folder once folder is scrolled into view
 * * [x] make alignment for sticking line up properly to bottom of screen
 * * [x] make tabs detach when scrolling back up
